@@ -2,7 +2,7 @@ class Solver
     def factorial(number)
         raise ArgumentError, 'Factorial is not defined for negative integers.' if number.negative?
     
-        result = (1..number).sum
+        result = (1..number).reduce(1, :*)
         result
     end
   
